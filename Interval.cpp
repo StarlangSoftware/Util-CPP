@@ -11,7 +11,7 @@
  * @param end   second element of {@link Tuple}.
  */
 void Interval::add(int start, int end) {
-    list.push_back(Tuple(start, end));
+    list.emplace_back(start, end);
 }
 
 /**
