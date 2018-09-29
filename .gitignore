@@ -12,3 +12,5 @@ cmake-build-debug/libUtil.a
 cmake-build-debug/CMakeFiles/Util.dir/CXX.includecache
 cmake-build-debug/CMakeFiles/Util.dir/depend.internal
 cmake-build-debug/CMakeFiles/Util.dir/Tuple.cpp.o
+cmake-build-debug/CMakeFiles/Util.dir/Permutation.cpp.o
+cmake-build-debug/CMakeFiles/Util.dir/Swap.cpp.o

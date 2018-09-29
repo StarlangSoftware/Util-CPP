@@ -3,4 +3,4 @@ project(Util)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(Util Tuple.cpp Tuple.h Interval.cpp Interval.h Swap.cpp Swap.h)
+add_library(Util Tuple.cpp Tuple.h Interval.cpp Interval.h Swap.cpp Swap.h Permutation.cpp Permutation.h)
