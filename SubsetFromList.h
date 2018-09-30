@@ -12,8 +12,9 @@ class SubsetFromList : public Subset{
 private:
     int* elementList;
     int* indexList;
+    int listSize;
 public:
-    SubsetFromList(int* list, int elementCount);
+    SubsetFromList(int* list, int listSize, int elementCount);
     virtual ~SubsetFromList();
     bool next();
 };

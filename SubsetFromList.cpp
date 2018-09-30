@@ -14,10 +14,11 @@
  * @param list         array type input.
  * @param elementCount integer input element count.
  */
-SubsetFromList::SubsetFromList(int *list, int elementCount) {
+SubsetFromList::SubsetFromList(int *list, int listSize, int elementCount) {
     int multisetCount, i;
     this->elementList = list;
     this->elementCount = elementCount;
+    this->listSize = listSize;
     multisetCount = ((elementCount + 2) * (elementCount + 1)) / 2;
     set = new int[elementCount];
     indexList = new int[elementCount];
@@ -41,7 +42,7 @@ bool SubsetFromList::next() {
     int i, j;
     for (i = elementCount - 1; i > -1; i--) {
         indexList[i]++;
-        if (indexList[i] < elementList.length - elementCount + i + 1)
+        if (indexList[i] < listSize - elementCount + i + 1)
             break;
     }
     if (i == -1)
