@@ -50,8 +50,8 @@ Result: The imported project is listed in the Project Explorer view and files ar
 
 After being done with the downloading and opening project, select **Build Project** option from **Build** menu.
 
-# Detailed Description
-
+Detailed Description
+============
 + [Interval](#interval)
 + [Subset](#subset)
 + [SubsetFromList](#subsetfromlist)
