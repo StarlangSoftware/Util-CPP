@@ -19,10 +19,8 @@ SubsetFromList::SubsetFromList(int *list, int listSize, int elementCount) {
     this->elementList = list;
     this->elementCount = elementCount;
     this->listSize = listSize;
-    multisetCount = ((elementCount + 2) * (elementCount + 1)) / 2;
     set = new int[elementCount];
     indexList = new int[elementCount];
-    multiset = new int[multisetCount];
     for (i = 0; i < elementCount; i++) {
         indexList[i] = i;
         set[i] = elementList[indexList[i]];

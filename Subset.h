@@ -9,7 +9,6 @@
 class Subset {
 protected:
     int* set;
-    int* multiset;
     int elementCount;
 private:
     int rangeEnd;
@@ -18,9 +17,6 @@ public:
     Subset();
     virtual ~Subset();
     int* get();
-    int* getX(int M);
-    int* getmultiset();
-    void multiSet(int M);
     bool next();
 };
 

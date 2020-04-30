@@ -19,23 +19,19 @@ Subset::Subset(int rangeStart, int rangeEnd, int elementCount) {
     int i, multisetCount;
     this->rangeEnd = rangeEnd;
     this->elementCount = elementCount;
-    multisetCount = ((elementCount + 2) * (elementCount + 1)) / 2;
     set = new int[elementCount];
-    multiset = new int[multisetCount];
     for (i = 0; i < elementCount; i++)
         set[i] = rangeStart + i;
 }
 
 Subset::~Subset() {
     delete set;
-    delete multiset;
 }
 
 /**
  * An empty constructor of {@link Subset} class.
  */
-Subset::Subset() {
-}
+Subset::Subset() = default;
 
 /**
  * Getter for the set array.
@@ -44,67 +40,6 @@ Subset::Subset() {
  */
 int *Subset::get() {
     return set;
-}
-
-/**
- * The getX method takes an integer M as an input. Creates a new array X size of elementCount+2 and assigns 0 to its
- * first element. Starting from the second index, it assigns set array's elements to newly
- * created array X. Then, assigns M to the last element of X.
- *
- * @param M integer input.
- * @return Array size of elementCount+2.
- */
-int *Subset::getX(int M) {
-    int* X;
-    int i;
-    X = new int[elementCount + 2];
-    X[0] = 0;
-    for (i = 0; i < elementCount; i++) {
-        X[i + 1] = set[i];
-    }
-    X[elementCount + 1] = M;
-    return X;
-}
-
-/**
- * Getter for the multiset array.
- *
- * @return the multiset array.
- */
-int *Subset::getmultiset() {
-    return multiset;
-}
-
-int compare(const void * a, const void * b){
-    return (*(int*)a - *(int*)b);
-}
-
-/**
- * The multiset method takes an integer M as an input. Assigns ith element of set array to even numbered
- * indices of multiset array and M - ith element of set array to odd numbered
- * indices of multiset array, and i is between 0 and elementCount. Then, assigns M to jth index of multiset
- * array. At the end, fill up the rest of the multiset array via different
- * indices of set array and sort the multiset array.
- *
- * @param M integer input.
- */
-void Subset::multiSet(int M) {
-    int i, j, k;
-    j = 0;
-    for (i = 0; i < elementCount; i++) {
-        multiset[j] = set[i];
-        j++;
-        multiset[j] = M - set[i];
-        j++;
-    }
-    multiset[j] = M;
-    j++;
-    for (i = elementCount - 1; i > 0; i--)
-        for (k = i - 1; k >= 0; k--) {
-            multiset[j] = set[i] - set[k];
-            j++;
-        }
-    qsort(multiset, M, sizeof(int), compare);
 }
 
 /**
