@@ -40,5 +40,5 @@ int Interval::getLast(unsigned long index) {
  * @return size of the list {@link vector}.
  */
 unsigned long Interval::size() {
-    return list.capacity();
+    return list.size();
 }
