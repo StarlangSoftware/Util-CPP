@@ -3,7 +3,7 @@
 //
 
 #include "catch.hpp"
-#include "../RandomNormalizedArray.h"
+#include "../src/RandomNormalizedArray.h"
 
 TEST_CASE("RandomNormalizedArray-get") {
     double* array;

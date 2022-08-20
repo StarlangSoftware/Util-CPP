@@ -3,7 +3,7 @@
 //
 
 #include "catch.hpp"
-#include "../SubsetFromList.h"
+#include "../src/SubsetFromList.h"
 
 TEST_CASE("SubsetFromList-next1") {
     int* firstSubSet;

@@ -3,7 +3,7 @@
 //
 
 #include "catch.hpp"
-#include "../Subset.h"
+#include "../src/Subset.h"
 
 TEST_CASE("Subset-next1") {
     int* firstSubSet;
