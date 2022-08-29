@@ -2,10 +2,10 @@
 // Created by Olcay Taner Yıldız on 30.09.2018.
 //
 
-#include <cstdlib>
 #include <random>
 #include "RandomNormalizedArray.h"
 
+using namespace std;
 /**
  * The constructor of {@link RandomNormalizedArray} class gets an integer itemCount as an input. Creates an array of
  * size itemCount and loops through each element of the array and initializes them with a random number by using rand.
@@ -17,11 +17,10 @@ RandomNormalizedArray::RandomNormalizedArray(int itemCount) {
     int i;
     double sum = 0.0;
     array = new double[itemCount];
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_real_distribution<> distribution(0.0, 1.0);
+    uniform_real_distribution<> distribution(0.0, 1.0);
+    default_random_engine randomEngine = default_random_engine (1);
     for (i = 0; i < itemCount; i++) {
-        array[i] = distribution(gen);
+        array[i] = distribution(randomEngine);
         sum += array[i];
     }
     for (i = 0; i < itemCount; i++) {
