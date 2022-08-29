@@ -18,7 +18,7 @@ RandomNormalizedArray::RandomNormalizedArray(int itemCount) {
     double sum = 0.0;
     array = new double[itemCount];
     uniform_real_distribution<> distribution(0.0, 1.0);
-    default_random_engine randomEngine = default_random_engine (1);
+    default_random_engine randomEngine = default_random_engine (time(0));
     for (i = 0; i < itemCount; i++) {
         array[i] = distribution(randomEngine);
         sum += array[i];
