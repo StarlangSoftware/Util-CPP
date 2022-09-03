@@ -3,7 +3,7 @@
 //
 
 #include <random>
-#include "RandomNormalizedArray.h"
+#include "RandomArray.h"
 
 using namespace std;
 /**
@@ -13,12 +13,12 @@ using namespace std;
  *
  * @param itemCount integer input defining array size.
  */
-RandomNormalizedArray::RandomNormalizedArray(int itemCount) {
+double* RandomArray::normalizedArray(int itemCount) {
     int i;
     double sum = 0.0;
-    array = new double[itemCount];
+    auto* array = new double[itemCount];
     uniform_real_distribution<> distribution(0.0, 1.0);
-    default_random_engine randomEngine = default_random_engine (time(0));
+    auto randomEngine = default_random_engine (time(0));
     for (i = 0; i < itemCount; i++) {
         array[i] = distribution(randomEngine);
         sum += array[i];
@@ -26,17 +26,15 @@ RandomNormalizedArray::RandomNormalizedArray(int itemCount) {
     for (i = 0; i < itemCount; i++) {
         array[i] /= sum;
     }
-}
-
-RandomNormalizedArray::~RandomNormalizedArray() {
-    delete array;
-}
-
-/**
- * Getter for the double array.
- *
- * @return the double array.
- */
-double *RandomNormalizedArray::get() {
     return array;
+}
+
+vector<int> RandomArray::indexArray(int itemCount, int seed) {
+    vector<int> randomArray;
+    randomArray.reserve(itemCount);
+    for (int i = 0; i < itemCount; i++){
+        randomArray.push_back(i);
+    }
+    std::shuffle(randomArray.begin(), randomArray.end(), default_random_engine(seed));
+    return randomArray;
 }
