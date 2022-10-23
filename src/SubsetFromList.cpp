@@ -15,7 +15,7 @@
  * @param elementCount integer input element count.
  */
 SubsetFromList::SubsetFromList(int *list, int listSize, int elementCount) {
-    int multisetCount, i;
+    int i;
     this->elementList = list;
     this->elementCount = elementCount;
     this->listSize = listSize;

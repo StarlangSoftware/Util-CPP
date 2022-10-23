@@ -28,7 +28,7 @@ Permutation::~Permutation() {
  *
  * @return Array a.
  */
-int* Permutation::get(){
+int* Permutation::get() const{
     return a;
 }
 

@@ -21,7 +21,7 @@ Tuple::Tuple(int first, int last) {
  *
  * @return the first item.
  */
-int Tuple::getFirst() {
+int Tuple::getFirst() const{
     return first;
 }
 
@@ -30,7 +30,7 @@ int Tuple::getFirst() {
  *
  * @return the last item.
  */
-int Tuple::getLast() {
+int Tuple::getLast() const{
     return last;
 }
 

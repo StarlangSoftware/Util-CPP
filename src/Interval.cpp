@@ -20,7 +20,7 @@ void Interval::add(int start, int end) {
  * @param index to use at getting tuple from {@link vector}.
  * @return the first element at the list {@link vector}'s given index.
  */
-int Interval::getFirst(unsigned long index) {
+int Interval::getFirst(unsigned long index) const{
     return list.at(index).getFirst();
 }
 
@@ -30,7 +30,7 @@ int Interval::getFirst(unsigned long index) {
  * @param index to use at getting tuple from {@link vector}.
  * @return the last element at the list {@link vector}'s given index.
  */
-int Interval::getLast(unsigned long index) {
+int Interval::getLast(unsigned long index) const{
     return list.at(index).getLast();
 }
 
@@ -39,6 +39,6 @@ int Interval::getLast(unsigned long index) {
  *
  * @return size of the list {@link vector}.
  */
-unsigned long Interval::size() {
+unsigned long Interval::size() const{
     return list.size();
 }

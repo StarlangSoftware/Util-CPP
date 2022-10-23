@@ -12,8 +12,8 @@ private:
     int last;
 public:
     Tuple(int first, int last);
-    int getFirst();
-    int getLast();
+    int getFirst() const;
+    int getLast() const;
 };
 
 

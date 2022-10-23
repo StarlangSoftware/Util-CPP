@@ -38,7 +38,7 @@ Subset::Subset() = default;
  *
  * @return the set array.
  */
-int *Subset::get() {
+int *Subset::get() const{
     return set;
 }
 

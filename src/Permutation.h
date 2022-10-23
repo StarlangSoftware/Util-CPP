@@ -12,7 +12,7 @@ private:
     int* a;
 public:
     explicit Permutation(int n);
-    int* get();
+    int* get() const;
     virtual ~Permutation();
     bool next();
 };

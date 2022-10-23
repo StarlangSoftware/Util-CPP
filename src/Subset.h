@@ -16,7 +16,7 @@ public:
     Subset(int rangeStart, int rangeEnd, int elementCount);
     Subset();
     virtual ~Subset();
-    int* get();
+    int* get() const;
     bool next();
 };
 

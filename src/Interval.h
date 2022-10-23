@@ -15,9 +15,9 @@ private:
 public:
     Interval() = default;
     void add(int start, int end);
-    int getFirst(unsigned long index);
-    int getLast(unsigned long index);
-    unsigned long size();
+    int getFirst(unsigned long index) const;
+    int getLast(unsigned long index) const;
+    unsigned long size() const;
 };
 
 
