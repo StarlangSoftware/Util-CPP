@@ -40,11 +40,13 @@ bool SubsetFromList::next() {
     int i, j;
     for (i = elementCount - 1; i > -1; i--) {
         indexList[i]++;
-        if (indexList[i] < listSize - elementCount + i + 1)
+        if (indexList[i] < listSize - elementCount + i + 1){
             break;
+        }
     }
-    if (i == -1)
+    if (i == -1){
         return false;
+    }
     set[i] = elementList[indexList[i]];
     for (j = i + 1; j < elementCount; j++) {
         indexList[j] = indexList[j - 1] + 1;
