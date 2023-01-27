@@ -3,6 +3,7 @@
 //
 
 #include "Permutation.h"
+#include "Swap.h"
 
 /**
  * A constructor of {@link Permutation} class which creates a new array and assigns integer
@@ -50,15 +51,11 @@ bool Permutation::next() {
     while (a[i] >= a[j]) {
         j--;
     }
-    tmp = a[i];
-    a[i] = a[j];
-    a[j] = tmp;
+    Swap::swap(a, i, j);
     k = i + 1;
     j = n - 1;
     while (k < j) {
-        tmp = a[k];
-        a[k] = a[j];
-        a[j] = tmp;
+        Swap::swap(a, j, k);
         k++;
         j--;
     }
