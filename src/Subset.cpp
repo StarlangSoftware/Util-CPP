@@ -16,12 +16,13 @@
  * @param elementCount integer input element count.
  */
 Subset::Subset(int rangeStart, int rangeEnd, int elementCount) {
-    int i, multisetCount;
+    int i;
     this->rangeEnd = rangeEnd;
     this->elementCount = elementCount;
     set = new int[elementCount];
-    for (i = 0; i < elementCount; i++)
+    for (i = 0; i < elementCount; i++){
         set[i] = rangeStart + i;
+    }
 }
 
 Subset::~Subset() {
@@ -51,12 +52,15 @@ bool Subset::next() {
     int i, j;
     for (i = elementCount - 1; i > -1; i--) {
         set[i]++;
-        if (set[i] <= rangeEnd - elementCount + i + 1)
+        if (set[i] <= rangeEnd - elementCount + i + 1){
             break;
+        }
     }
-    if (i == -1)
+    if (i == -1){
         return false;
-    for (j = i + 1; j < elementCount; j++)
+    }
+    for (j = i + 1; j < elementCount; j++){
         set[j] = set[j - 1] + 1;
+    }
     return true;
 }
