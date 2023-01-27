@@ -40,7 +40,7 @@ int* Permutation::get() const{
  */
 bool Permutation::next() {
     int i = n - 2;
-    int j, tmp, k;
+    int j, k;
     while (i >= 0 && a[i] >= a[i + 1]) {
         i--;
     }
