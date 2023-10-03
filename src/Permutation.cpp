@@ -6,7 +6,7 @@
 #include "Swap.h"
 
 /**
- * A constructor of {@link Permutation} class which creates a new array and assigns integer
+ * A constructor of Permutation class which creates a new array and assigns integer
  * numbers starting from 0 to given input n.
  *
  * @param n integer input.

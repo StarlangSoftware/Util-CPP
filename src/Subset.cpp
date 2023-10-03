@@ -6,7 +6,7 @@
 #include "Subset.h"
 
 /**
- * The constructor of {@link Subset} class which takes 3 integer inputs; rangeStart, rangeEnd, and elementCount.
+ * The constructor of Subset class which takes 3 integer inputs; rangeStart, rangeEnd, and elementCount.
  * It initializes variables rangeEnd and elementCount with given inputs, creates 2 arrays; set and multiset with the
  * size of given elementCount and multisetCount, which is derived from elementCount, respectively. Then, it assigns
  * rangeStart+i to each ith element of set array.
@@ -30,7 +30,7 @@ Subset::~Subset() {
 }
 
 /**
- * An empty constructor of {@link Subset} class.
+ * An empty constructor of Subset class.
  */
 Subset::Subset() = default;
 

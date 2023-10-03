@@ -7,7 +7,7 @@
 
 using namespace std;
 /**
- * The constructor of {@link RandomNormalizedArray} class gets an integer itemCount as an input. Creates an array of
+ * The constructor of RandomNormalizedArray class gets an integer itemCount as an input. Creates an array of
  * size itemCount and loops through each element of the array and initializes them with a random number by using rand.
  * Then, accumulates each element of the array and at the end divides each element with the resulting sum.
  *

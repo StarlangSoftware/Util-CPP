@@ -5,7 +5,7 @@
 #include "SubsetFromList.h"
 
 /**
- * A constructor of {@link SubsetFromList} class takes an integer list and an integer elementCount as inputs. It initializes
+ * A constructor of SubsetFromList class takes an integer list and an integer elementCount as inputs. It initializes
  * elementList and elementCount variables with given inputs, then creates 3 arrays; set, indexList, and multiset with the
  * size of given elementCount and multisetCount, which is derived from elementCount, respectively. Then, it assigns
  * i to each ith element of indexList array and use this index to point at elementList and

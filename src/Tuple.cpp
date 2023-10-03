@@ -5,7 +5,7 @@
 #include "Tuple.h"
 
 /**
- * The constructor of {@link Tuple} class which takes two integer inputs and initializes first and last variables
+ * The constructor of Tuple class which takes two integer inputs and initializes first and last variables
  * with given inputs.
  *
  * @param first integer input.
@@ -17,7 +17,7 @@ Tuple::Tuple(int first, int last) {
 }
 
 /**
- * Getter for the first item at {@link Tuple}.
+ * Getter for the first item at Tuple.
  *
  * @return the first item.
  */
@@ -26,7 +26,7 @@ int Tuple::getFirst() const{
 }
 
 /**
- * Getter for the last item at {@link Tuple}.
+ * Getter for the last item at Tuple.
  *
  * @return the last item.
  */
