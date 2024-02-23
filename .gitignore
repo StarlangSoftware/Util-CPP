@@ -86,3 +86,12 @@ cmake-build-debug/CMakeFiles/Util.dir/Tuple.cpp.o
 /cmake-build-debug/conanbuildinfo.txt
 /cmake-build-debug/conaninfo.txt
 /cmake-build-debug/graph_info.json
+build/Release/generators/CMakePresets.json
+build/Release/generators/conan_toolchain.cmake
+build/Release/generators/conanbuild.sh
+build/Release/generators/conanbuildenv-release-x86_64.sh
+build/Release/generators/conanrun.sh
+build/Release/generators/conanrunenv-release-x86_64.sh
+build/Release/generators/deactivate_conanbuild.sh
+build/Release/generators/deactivate_conanrun.sh
+conan_provider.cmake
