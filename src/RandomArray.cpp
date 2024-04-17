@@ -29,6 +29,12 @@ double* RandomArray::normalizedArray(int itemCount) {
     return array;
 }
 
+/**
+ * Creates and returns a random index array, where the indexes in the array are between 0 and itemCount - 1.
+ * @param itemCount Number of indexes
+ * @param random Random number generator
+ * @return Randomized array containing numbers between 0 and itemCount - 1.
+ */
 vector<int> RandomArray::indexArray(int itemCount, int seed) {
     vector<int> randomArray;
     randomArray.reserve(itemCount);
