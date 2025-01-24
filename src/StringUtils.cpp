@@ -2,7 +2,7 @@
 // Created by Olcay Taner YILDIZ on 24.01.2025.
 //
 
-#include "String.h"
+#include "StringUtils.h"
 #include <regex>
 #include <sstream>
 #include <fstream>
@@ -14,7 +14,7 @@
  * @param to Replaced string
  * @return A copy of the input string where all occurrences of from is replaced with to.
  */
-string String::replaceAll(string str, const string &from, const string &to) {
+string StringUtils::replaceAll(string str, const string &from, const string &to) {
     size_t start_pos = 0;
     while ((start_pos = str.find(from, start_pos)) != std::string::npos) {
         str.replace(start_pos, from.length(), to);
@@ -28,7 +28,7 @@ string String::replaceAll(string str, const string &from, const string &to) {
  * @param str Input string
  * @return Returns a copy string with leading and trailing spaces removed.
  */
-string String::trim(const string &str) {
+string StringUtils::trim(const string &str) {
     int start = -1, end = -1;
     for (int i = 0; i < str.size(); i++) {
         if (str[i] != ' ') {
@@ -50,7 +50,7 @@ string String::trim(const string &str) {
  * @param line Given string
  * @return Split parts as a vector
  */
-vector<string> String::split(const string &line) {
+vector<string> StringUtils::split(const string &line) {
     std::istringstream stringStream(line);
     vector<string> tokens{istream_iterator<string>{stringStream}, istream_iterator<string>{}};
     return tokens;
@@ -63,7 +63,7 @@ vector<string> String::split(const string &line) {
  * @return true if the character sequence smallString is a suffix of the character sequence largeString; false
  * otherwise.
  */
-bool String::endsWith(const string &largeString, const string &smallString) {
+bool StringUtils::endsWith(const string &largeString, const string &smallString) {
     if (largeString.size() < smallString.size()) {
         return false;
     }
@@ -77,7 +77,7 @@ bool String::endsWith(const string &largeString, const string &smallString) {
  * @param separator Separator string
  * @return Split parts as a vector
  */
-vector<string> String::split(const string &line, const string &separator) {
+vector<string> StringUtils::split(const string &line, const string &separator) {
     size_t current, previous = 0;
     vector<string> tokens;
     current = line.find_first_of(separator);
@@ -97,11 +97,11 @@ vector<string> String::split(const string &line, const string &separator) {
  * @return true if the character sequence smallString is a prefix of the character sequence largeString; false
  * otherwise.
  */
-bool String::startsWith(const string &largeString, const string &smallString) {
+bool StringUtils::startsWith(const string &largeString, const string &smallString) {
     return largeString.rfind(smallString, 0) == 0;
 }
 
-map<string, string> String::readHashMap(const string& fileName){
+map<string, string> StringUtils::readHashMap(const string& fileName){
     string line;
     map<string, string> result;
     ifstream inputFile;

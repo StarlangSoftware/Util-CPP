@@ -9,7 +9,7 @@
 #include <map>
 using namespace std;
 
-class String {
+class StringUtils {
 public:
     static bool startsWith(const string& largeString, const string& smallString);
     static bool endsWith(const string& largeString, const string& smallString);
@@ -21,4 +21,4 @@ public:
 };
 
 
-#endif //UTIL_STRING_H
+#endif //UTIL_STRINGUTILS_H
