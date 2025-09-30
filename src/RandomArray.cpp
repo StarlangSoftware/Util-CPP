@@ -5,6 +5,9 @@
 #include <random>
 #include "RandomArray.h"
 
+#include <algorithm>
+#include <ctime>
+
 using namespace std;
 /**
  * The constructor of RandomNormalizedArray class gets an integer itemCount as an input. Creates an array of

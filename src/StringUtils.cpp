@@ -6,6 +6,7 @@
 #include <regex>
 #include <sstream>
 #include <fstream>
+#include <iterator>
 
 /**
  * Replaces all occurrences of from with to in an input string.
